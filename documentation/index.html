@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Luxrio - The Fashion & Watch E-Commerce HTML5 Template</title>
+  <meta name="author" content="Vecuro">
+  <meta name="description" content="Luxrio - The Fashion & Watch E-Commerce HTML5 Template">
+  <meta name="keywords" content="Luxrio - The Fashion & Watch E-Commerce HTML5 Template" />
+  <meta name="robots" content="INDEX,FOLLOW">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Favicons - Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- All CSS -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Theme Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target="#main-menu ul" data-offset="300">
+
+  <!-- Mobile Menu -->
+  <div class="vs-menu-wrapper  ">
+    <div class="vs-menu-area">
+      <button class="vs-menu-toggle">✕</button>
+      <div class="vs-mobile-menu"></div><!-- Menu Will Append With Javascript -->
+    </div>
+  </div>
+
+
+  <!-- Header Area -->
+  <header>
+    <div class="container-fluid">
+      <nav class="main-menu navbar justify-content-center" id="main-menu">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="#installation">Template Installation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pageList">Pages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fonts">Fonts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fileCss">Source File (CSS)</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fileJs">Source File (JS)</a></li>
+          <li class="nav-item"><a class="nav-link" href="#customization">Customization</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Toggle -->
+      <button class="vs-menu-toggle d-inline-block d-lg-none">☵</button>
+    </div>
+  </header>
+  <!-- Header Area end -->
+  <!-- Hero Area -->
+  <div class="hero-area background-image d-flex align-items-center" data-vs-img="assets/img/hero-img/hero-bg-1.jpg">
+    <div class="container">
+      <div class="row text-center justify-content-center">
+        <div class="col-xl-7">
+          <!-- Hero Content -->
+          <div class="hero-content">
+            <a href="index.html">
+              <img src="assets/img/logo-2.svg" alt="Logo" class="mb-4 middle-logo">
+            </a>
+            <h1 class="main-title">Luxrio - The Fashion & Watch E-Commerce HTML5 Template</h1>
+            <span class="meta">Created: 13/11/2024</span>
+            <p class="text">Thank you for purchasing my template. If you have any questions that are beyond the scope of
+              this help file, please feel free to open a new ticket at our <a
+                href="https://themeforest.net/user/vecuro_themes">support forum</a></p>
+            <h3 class="text-white">24/7 Support: Send us a message</h3>
+            <a href="info@vecuro.com" class="def-btn">Email: info@vecuro.com</a>
+          </div>
+          <!-- Hero Content end -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Area end -->
+
+  <section class="section-padding" id="installation">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2 class="title">Template Installation</h2>
+      </div>
+
+      <h3 class="inner-title">FTP Upload:</h3>
+      <ul>
+        <li>Open up your FTP manager and connect to your hosting</li>
+        <li>Browse to required directory (Normally public_html)</li>
+        <li>Upload the files inside <strong>luxrio</strong> folder.</li>
+        <li>Below is the folder structure you will see in your website root directory:
+          <ul>
+            <li><code>luxrio/assets/css</code> - Stylesheet files</li>
+            <li><code>luxrio/assets/fonts</code> - Fonts files</li>
+            <li><code>luxrio/assets/img</code> - Image files</li>
+            <li><code>luxrio/assets/js</code> - JS files</li>
+            <li><code>luxrio/assets/sass</code> - SCSS files</li>
+            <li><code>mail.php</code> - PHP files for Contact Form</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h1 id="s1">HTML Structure</h1>
+      <p>We are used Bootstrap Latest Version <code>v5.3.3</code> framework in this template.<br> The general template
+        structure is the same throughout the template. Here is the general structure.</p>
+      <pre class="code-block">
+          <code>
+            &lt;!doctype html&gt;
+            &lt;html class="no-js" lang="zxx"&gt;
+      
+            &lt;head&gt;
+              &lt;meta charset="utf-8"&gt;
+              &lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;
+              &lt;title&gt;Luxrio - The Fashion &amp; Watch E-Commerce HTML5 Template | Vecuro | Home 1 &lt;/title&gt;
+              &lt;meta name="author" content="vecuro"&gt;
+              &lt;meta name="description" content="Luxrio - The Fashion &amp; Watch E-Commerce HTML5 Template"&gt;
+              &lt;meta name="keywords" content="Luxrio - The Fashion &amp; Watch E-Commerce HTML5 Template"&gt;
+              &lt;meta name="robots" content="INDEX,FOLLOW"&gt;
+              &lt;!-- Mobile Specific Metas --&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+              &lt;!-- Favicons - Place favicon.ico in the root directory --&gt;
+              &lt;link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png"&gt;
+              &lt;link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png"&gt;
+              &lt;link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png"&gt;
+              &lt;link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png"&gt;
+              &lt;link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png"&gt;
+              &lt;link rel="manifest" href="assets/img/favicons/manifest.json"&gt;
+              &lt;meta name="msapplication-TileColor" content="#ffffff"&gt;
+              &lt;meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png"&gt;
+              &lt;meta name="theme-color" content="#ffffff"&gt;
+              &lt;!--==============================
+                Google Fonts
+              ============================== --&gt;
+              &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+              &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+              &lt;link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&amp;family=Italiana&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"&gt;
+              &lt;!--==============================
+                  All CSS File
+              ============================== --&gt;
+              &lt;!-- Bootstrap --&gt;
+              &lt;link rel="stylesheet" href="assets/css/bootstrap.min.css"&gt;
+              &lt;!-- Fontawesome Icon --&gt;
+              &lt;link rel="stylesheet" href="assets/css/fontawesome.min.css"&gt;
+              &lt;!-- Magnific Popup --&gt;
+              &lt;link rel="stylesheet" href="assets/css/magnific-popup.min.css"&gt;
+              &lt;!-- Slick Slider --&gt;
+              &lt;link rel="stylesheet" href="assets/css/slick.min.css"&gt;
+              &lt;!-- Animation CSS --&gt;
+              &lt;link rel="stylesheet" href="assets/css/animate.min.css"&gt;
+              &lt;!-- Theme Custom CSS --&gt;
+              &lt;link rel="stylesheet" href="assets/css/style.css"&gt;
+            &lt;/head&gt;
+      
+            &lt;body class="vs-body"&gt;
+            &lt;!-- [if lte IE 9] --&gt;
+            &lt;p class="browserupgrade"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href="https://browsehappy.com/"&gt;upgrade your browser&lt;/a&gt; to improve your experience and security.&lt;/p&gt;
+              &lt;![endif]--&gt;
+          
+              &lt;!-- ********************************
+                  Code Start From Here
+              ******************************** --&gt;
+          
+              &lt;!-- ==============================
+                Preloader
+              ============================== --&gt;
+              &lt;div class="preloader"&gt;
+                
+              &lt;/div&gt;
+          
+              &lt;!-- ==============================
+                Mobile Menu
+              ============================== --&gt;
+              &lt;div class="vs-menu-wrapper"&gt;
+          
+              &lt;/div&gt;
+          
+              &lt;!-- ==============================
+                Offcanvas
+              ============================== --&gt;
+              &lt;div class="sidemenu-wrapper"&gt;
+          
+              &lt;/div&gt;
+          
+              &lt;!-- ==============================
+                Sticky Navbar
+              ============================== --&gt;
+              &lt;div id="navbars" class="header-sticky navbars"&gt;
+          
+              &lt;/div&gt;
+          
+              &lt;!-- ==============================
+                Popup Subscription
+              ============================== --&gt;
+              &lt;div id="popup" class="popup-overlay d-none"&gt;
+          
+              &lt;/div&gt;
+          
+              &lt;!-- ==============================
+                Popup Search Box
+              ============================== --&gt;
+              &lt;div class="popup-search-box"&gt;
+          
+              &lt;/div&gt;
+          
+              &lt;!-- ==============================
+                Sticky Navbar
+              ============================== --&gt;
+              &lt;div id="navbars" class="header-sticky navbars"&gt;
+                
+              &lt;/div&gt;
+          
+              &lt;!-- ==============================
+                Main Section Wrapper
+              ============================== --&gt;
+              &lt;main class="main"&gt;
+          
+                &lt;!-- ==============================
+                  Header Area
+                ============================== --&gt;
+                &lt;header class="vs-header layout2"&gt;&lt;/header&gt;
+          
+                &lt;section&gt;&lt;/section&gt;
+                .
+                .
+                .
+                .
+                &lt;section&gt;&lt;/section&gt;
+          
+                &lt;!-- ==============================
+                  Footer Area
+                ============================== --&gt;
+                &lt;footer class="footer-layout1"&gt;&lt;/footer&gt;
+          
+              &lt;/main&gt;
+              &lt;!-- ==============================
+                  Main Section Wrapper End
+                ============================== --&gt;
+          
+              &lt;a href="#" class="scrollToTop scroll-btn"&gt;&lt;i class="far fa-arrow-up"&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;!-- ********************************
+              Code End Here
+              ******************************** --&gt;
+          
+              &lt;!-- ==============================
+                    All Js File
+              ============================== --&gt;
+          
+              &lt;!-- Jquery --&gt;
+              &lt;script src="assets/js/vendor/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Jquery UI --&gt;
+              &lt;script src="assets/js/jquery-ui.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Slick Slider --&gt;
+              &lt;script src="assets/js/slick.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Bootstrap --&gt;
+              &lt;script src="assets/js/bootstrap.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- WOW.js Animation --&gt;
+              &lt;script src="assets/js/wow.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Magnific Popup --&gt;
+              &lt;script src="assets/js/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Image Loaded Jquery --&gt;
+              &lt;script src="assets/js/imagesloaded.pkgd.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Gsap --&gt;
+              &lt;script src="assets/js/gsap.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- ScrollTrigger --&gt;
+              &lt;script src="assets/js/ScrollTrigger.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- ScrollToPlugin --&gt;
+              &lt;script src="assets/js/ScrollToPlugin.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- SplitText --&gt;
+              &lt;script src="assets/js/SplitText.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Lenis --&gt;
+              &lt;script src="assets/js/bundled-lenis.min.js"&gt;&lt;/script&gt;
+          
+              &lt;!-- Main Js File --&gt;
+              &lt;script src="assets/js/main.js"&gt;&lt;/script&gt;
+          
+            &lt;/body&gt;
+          &lt;/html&gt;
+          </code>
+        </pre>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h1 id="s1">Favicon Settings</h1>
+      <p>Favicon Will be found in <code>&lt;head&gt;</code> section.</p>
+      <pre class="code-block">
+          <code>
+            &lt;link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png"&gt;
+            &lt;link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png"&gt;
+            &lt;link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png"&gt;
+            &lt;link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png"&gt;
+            &lt;link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png"&gt;
+          </code>
+        </pre>
+
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h1 id="s1">Font Settings</h1>
+      <p>Font Will be found in <code>&lt;head&gt;</code> section.</p>
+      <pre class="code-block"><code>
+        &lt;!--==============================
+          Google Fonts
+        ============================== --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+        &lt;link
+          href=&quot;https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&amp;family=Italiana&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap&quot;
+          rel=&quot;stylesheet&quot;&gt;
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h1 id="s1">Logo Settings</h1>
+      <p>Logo Will be found in <code>&lt;header&gt;</code> Layout.</p>
+      <pre class="code-block"><code>
+        &lt;div class=&quot;header-logo&quot;&gt;
+          &lt;a href=&quot;index.html&quot;&gt;&lt;img src=&quot;assets/img/logo.svg&quot; alt=&quot;Luxrio&quot; class=&quot;logo&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="section-padding" id="pageList">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2 class="title">Pages</h2>
+      </div>
+      <h3 class="inner-title">Total 14 Pages</h3>
+      <h4>3 Home Pages</h4>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <h4><code>index.html</code> is <code>====&gt;</code> Home Page One</h4>
+            </li>
+            <li>
+              <h4><code>index-2.html</code> is <code>====&gt;</code> Home Page Two</h4>
+            </li>
+            <li>
+              <h4><code>index-3.html</code> is <code>====&gt;</code> Home Page Three</h4>
+            </li>
+          </ul>
+          <br>
+        </li>
+      </ul>
+      <h4>12 Inner Pages</h4>
+      <ul>
+        <li>
+          <ul class="list-wrap">
+            <li>
+              <h4><code>404.html</code> is <code>====&gt;</code> Error Page</h4>
+            </li>
+            <li>
+              <h4><code>about.html</code> is <code>====&gt;</code> About Page</h4>
+            </li>
+            <li>
+              <h4><code>blog-details.html</code> is <code>====&gt;</code> Blog Details Page</h4>
+            </li>
+            <li>
+              <h4><code>blog-list.html</code> is <code>====&gt;</code> Blog List Page</h4>
+            </li>
+            <li>
+              <h4><code>blog.html</code> is <code>====&gt;</code> Blog Page</h4>
+            </li>
+            <li>
+              <h4><code>cart.html</code> is <code>====&gt;</code> Cart Page</h4>
+            </li>
+            <li>
+              <h4><code>checkout.html</code> is <code>====&gt;</code> Checkout Page</h4>
+            </li>
+            <li>
+              <h4><code>contact.html</code> is <code>====&gt;</code> Contact Page</h4>
+            </li>
+            <li>
+              <h4><code>faq.html</code> is <code>====&gt;</code> FAQ's Page</h4>
+            </li>
+            <li>
+              <h4><code>shop-details.html</code> is <code>====&gt;</code> Shop Details Page</h4>
+            </li>
+            <li>
+              <h4><code>shop-sidebar.html</code> is <code>====&gt;</code> Shop Sidebar Page</h4>
+            </li>
+            <li>
+              <h4><code>shop.html</code> is <code>====&gt;</code> Shop Page</h4>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section-padding" id="fonts">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2 class="title">Fonts</h2>
+      </div>
+      <h3 class="inner-title">Google free fonts:</h3>
+      <ul class="mb-3">
+        <li>
+          <strong>
+            <a href="https://fonts.google.com/specimen/Cormorant">Cormorant</a>
+            &amp; <a href="https://fonts.google.com/specimen/Montserrat">Public Sans</a>
+          </strong>
+        </li>
+      </ul>
+      <p>Open <strong>assets/css/style.css</strong> file to find the fonts name from typography area. That's it...</p>
+    </div>
+  </section>
+
+  <section class="section-padding" id="fileCss">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2 class="title">Source File (CSS)</h2>
+      </div>
+
+      <div class="code-block">
+
+        <div>
+          <p>&lt;!-- Bootstrap --&gt;<br />
+            &lt;link rel="stylesheet" href="assets/css/bootstrap.min.css"&gt;<br />
+            &lt;!-- Fontawesome Icon --&gt;<br />
+            &lt;link rel="stylesheet" href="assets/css/fontawesome.min.css"&gt;<br />
+            &lt;!-- Magnific Popup --&gt;<br />
+            &lt;link rel="stylesheet" href="assets/css/magnific-popup.min.css"&gt;<br />
+            &lt;!-- Slick Slider --&gt;<br />
+            &lt;link rel="stylesheet" href="assets/css/slick.min.css"&gt;<br />
+            &lt;!-- Animate CSS --&gt;<br />
+            &lt;link rel="stylesheet" href="assets/css/animate.min.css"&gt;<br />
+            &lt;!-- Theme Custom CSS --&gt;<br />
+            &lt;link rel="stylesheet" href="assets/css/style.css"&gt;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="fileJs">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2 class="title">Source File (Js)</h2>
+      </div>
+
+      <div class="code-block">
+
+
+        <div>
+          <p>&lt;!-- Jquery --&gt;<br />
+            &lt;script src="assets/js/jquery-3.6.0.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- Jquery UI --&gt;<br />
+            &lt;script src="assets/js/jquery-ui.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- Slick Slider --&gt;<br />
+            &lt;script src="assets/js/slick.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- Bootstrap --&gt;<br />
+            &lt;script src="assets/js/bootstrap.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- WOW.js Animation --&gt;<br />
+            &lt;script src="assets/js/wow.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- Magnific Popup --&gt;<br />
+            &lt;script src="assets/js/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- Gsap --&gt;<br />
+            &lt;script src="assets/js/gsap.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- ScrollTrigger --&gt;<br />
+            &lt;script src="assets/js/ScrollTrigger.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- ScrollToPlugin --&gt;<br />
+            &lt;script src="assets/js/ScrollToPlugin.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- SplitText --&gt;<br />
+            &lt;script src="assets/js/SplitText.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- Lenis --&gt;<br />
+            &lt;script src="assets/js/bundled-lenis.min.js"&gt;&lt;/script&gt;<br />
+            &lt;!-- Main Js File --&gt;<br />
+            &lt;script src="assets/js/main.js"&gt;&lt;/script&gt;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="customization">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2 class="title">Customization</h2>
+      </div>
+
+      <!-- Links Change -->
+      <div class="inner-section">
+        <h3>How to Change Menu Links</h3>
+        <div class="img-box">
+          <img src="assets/img/pages/links-change.png" alt="Demo of How To Change Menu Links">
+        </div>
+      </div>
+
+      <!-- Links Change -->
+      <div class="inner-section">
+        <h3>How to Change Email Address</h3>
+        <div class="img-box">
+          <img src="assets/img/pages/email.png" alt="Demo of How To Change Menu Links">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer class="vs-footer pt-5">
+    <div class="container text-center my-5">
+      <div class="footer-content mb-5">
+        <h3 class="title"><strong>Once again thank you for purchasing one of our Templates</strong></h3>
+        <h3 class="sub-title">Best Regards</h3>
+        <span class="company-name"><a href="https://themeforest.net/user/vecuro_themes">Vecuro</a></span>
+      </div>
+    </div>
+    <div class="copyright">
+      <p class="text">Copyright <a href="https://themeforest.net/user/vecuro_themes">Vecuro</a> 2024. <span
+          class="underline">Documentation v1.0</span></p>
+    </div>
+  </footer>
+  <!-- scroll to top -->
+  <a href="#" class="scrollToTop">&#x21e7;</a>
+
+
+  <!-- Code End  -->
+
+
+  <!-- js file start -->
+  <!-- Jquery -->
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Mobile Menu -->
+  <script src="assets/js/vsmenu.min.js"></script>
+  <!-- Main Js File -->
+  <script src="assets/js/main.js"></script>
+  <!-- End js file -->
+</body>
+
+</html>

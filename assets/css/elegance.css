@@ -5,3 +5,106 @@
 .hero-main .hero-img1{width:34.13%;height:100%;object-fit:contain;background:#eee3d3}.hero-main .hero-img2{width:114px;height:114px;object-fit:contain}.hero-main .hero-img3{width:28.42%;height:100%;object-fit:cover}.hero-main .hero-img4{width:15%;height:auto}.hero-carousel{background-color:#f5f1e6}.breadcumb-wrapper{background-position:center 40%}.product-style2 .product-img{overflow:hidden}.img-box2{background-size:cover}.testi-thumb{height:auto!important}.testi-thumb img{height:auto!important}.sidemenu-body a{overflow-wrap:anywhere}
 @media(max-width:1199px){.hero-main .hero-img3{width:330px}}
 @media(max-width:991px){.hero-main .hero-img3{display:none}.hero-main .hero-img2{display:block;width:90px;height:90px;left:12px;top:12px}}
+
+
+/* Campaign images remain in the document flow so they fit at every breakpoint. */
+.hero-main.elegance-hero {
+  display: flex;
+  align-items: stretch;
+  min-height: 620px;
+  padding: 0;
+  background: #f5f1e6;
+}
+.elegance-hero .hero-picture {
+  display: block;
+  order: 2;
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.elegance-hero > .container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  max-width: none;
+  margin: 0;
+  padding: 64px clamp(24px, 4vw, 72px) 100px;
+}
+.elegance-hero > .container > .row { width: 100%; margin: 0; }
+.elegance-hero .col-lg-6 { width: 100%; padding: 0; }
+.hero-main.elegance-hero .hero-title { font-size: clamp(52px, 5.4vw, 88px); }
+.hero-main.elegance-hero .hero-subtitle { font-size: 14px; line-height: 1.8; }
+.hero-layout1 .carousel-arrow { right: 0; z-index: 2; }
+.hero-layout1 .carousel-arrow button { min-width: 52px; min-height: 48px; }
+/* Center the actual brand mark, without the template's circular orange frame. */
+.testi-style .testi-thumb {
+  width: min(240px, 70%) !important;
+  height: auto !important;
+  margin: 0 auto 28px;
+}
+.testi-style .testi-thumb img {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  margin: auto;
+  border: 0;
+  border-radius: 0 !important;
+  object-fit: contain !important;
+}
+.testi-layout1 .testi-inner { display: flex; flex-direction: column; }
+.testi-layout1 .testi-carousel { order: 0; min-width: 0; }
+.testi-layout1 .vs-carousel-arrow {
+  position: static;
+  order: 1;
+  transform: none;
+  min-width: 0;
+  min-height: 0;
+  width: auto;
+  justify-content: center;
+  gap: 20px;
+  margin: 24px auto 0;
+}
+.testi-layout1 .vs-carousel-arrow button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #bba577;
+  border-radius: 50%;
+}
+.testi-style .testi-text { text-transform: none; }
+.testi-style .testi-user { justify-content: center; line-height: 1.6; }
+.testi-style .testi-user::before,.testi-style .testi-user::after { flex-shrink: 0; }
+.img-box4__img1 { display: block; width: 100%; height: auto; object-fit: cover; }
+.product-style2 > .ele1 { display: none; }
+.product-style2 .product-img .img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; }
+.offer-img img,.blog-img img { width: 100%; object-fit: cover; }
+.blog-style2 .blog-img img { aspect-ratio: 4 / 3; }
+.insta-style > img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.footer-logo img { display: block; margin: auto; }
+.header-logo a { display: inline-block; max-width: 100%; }
+.footer-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
+.footer-menu a { margin: 0; }
+@media (max-width: 991px) {
+  .hero-main.elegance-hero { flex-direction: column; min-height: 0; text-align: center; }
+  .elegance-hero .hero-picture { order: 0; width: 100%; max-width: 100%; height: auto; aspect-ratio: 3 / 2; }
+  .elegance-hero > .container { width: 100%; padding: 36px 24px 88px; }
+  .hero-main.elegance-hero .hero-title { font-size: clamp(40px, 8vw, 64px); }
+  .hero-main.elegance-hero .hbtn1 { justify-content: center; }
+  .testi-layout1 .img-box3 { min-width: 0; width: 100%; height: auto; aspect-ratio: 3 / 2; margin-top: 0; background-size: cover; background-position: center; }
+}
+@media (max-width: 575px) {
+  .hero-main.elegance-hero .hero-subtitle { font-size: 12px; margin-bottom: 24px; }
+  .elegance-hero .vs-btn { padding: 16px 30px; }
+  .testi-style .testi-user { font-size: 12px; letter-spacing: 1px; gap: 8px; }
+  .testi-style .testi-text { font-size: 16px; line-height: 1.85; }
+  .header-wc { gap: 16px; }
+  .header-wc .wc-link { font-size: 11px; letter-spacing: 1px; }
+  .newsletter-form { display: flex; flex-direction: column; gap: 12px; }
+  .newsletter-form .form-control { width: 100%; min-width: 0; margin: 0; }
+  .newsletter-form .vs-btn { position: static; width: 100%; }
+  .scrollToTop { right: 16px; bottom: 20px; }
+}

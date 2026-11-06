@@ -1,16 +1,57 @@
 (() => {
   'use strict';
   const designs = [
-    ['floral-pendant', 'Floral Gold Pendant'], ['bridal-necklace', 'Bridal Gold Necklace'],
-    ['jhumka-earrings', 'Gold Jhumka Earrings'], ['wedding-bands', 'Classic Wedding Bands'],
-    ['gold-bangles', 'Traditional Gold Bangles'], ['sapphire-ring', 'Blue Sapphire Ring']
-  ];
+  [
+    "floral-pendant",
+    "Floral Gold Pendant"
+  ],
+  [
+    "bridal-necklace",
+    "Bridal Gold Necklace"
+  ],
+  [
+    "jhumka-earrings",
+    "Gold Jhumka Earrings"
+  ],
+  [
+    "wedding-bands",
+    "Classic Wedding Bands"
+  ],
+  [
+    "gold-bangles",
+    "Traditional Gold Bangles"
+  ],
+  [
+    "sapphire-ring",
+    "Blue Sapphire Ring"
+  ],
+  [
+    "emerald-pendant",
+    "Emerald Gold Pendant"
+  ],
+  [
+    "ruby-ring",
+    "Ruby Halo Ring"
+  ],
+  [
+    "pearl-earrings",
+    "Pearl Drop Earrings"
+  ],
+  [
+    "gold-bracelet",
+    "Floral Link Gold Bracelet"
+  ]
+];
   const wa = 'https://wa.me/94770777998?text=';
   const params = new URLSearchParams(location.search);
   const selected = designs.find(d => d[0] === params.get('design')) || designs[0];
   document.querySelectorAll('[data-design-title]').forEach(e => e.textContent = selected[1]);
   document.querySelectorAll('[data-design-enquiry]').forEach(e => e.href = wa + encodeURIComponent('Hello Elegance, I would like to enquire about the '+selected[1]+' design. Please send actual item photos, availability and a quotation.'));
-  if (document.querySelector('[data-design-title]')) document.querySelectorAll('img[src*="elegance/floral-pendant"]').forEach(e => { if (!e.closest('[data-product]')) {e.src='assets/img/elegance/'+selected[0]+'.webp';e.alt=selected[1]+' — illustrative design';} });
+  document.querySelectorAll('[data-design-image]').forEach(image => {
+    image.src = 'assets/img/elegance/' + selected[0] + '.webp';
+    image.alt = selected[1] + ' — illustrative design with Elegance branding';
+  });
+  if (document.querySelector('[data-design-title]')) document.title = selected[1] + ' | Elegance Gem & Jewelers';
   document.querySelectorAll('[data-enquiry-form],[data-contact-enquiry]').forEach(form => form.addEventListener('submit', event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
@@ -26,19 +67,52 @@
     button.setAttribute('aria-label',i%2 ? 'View jewellery design' : 'Enquire about jewellery design');
     button.addEventListener('click',()=> location.href='shop-details.html?design='+encodeURIComponent(card.dataset.product));
   });
-  const cards=[...document.querySelectorAll('[data-product]')];
-  const query=(params.get('q')||'').trim().slice(0,120).toLowerCase();
-  const category=params.get('category');
-  if (/shop(?:-sidebar)?\.html$/.test(location.pathname) && (query||category)) {
-    let count=0;
-    cards.forEach(card=>{const match=(!query||card.textContent.toLowerCase().includes(query))&&(!category||card.dataset.product===category);card.parentElement.hidden=!match;if(match) count++;});
-    document.querySelectorAll('.search-feedback').forEach(e=>e.textContent=count?'Designs matching your search.':'No matching designs. Try “gold”, “ring”, “necklace” or contact us for help.');
-  }
-  document.querySelectorAll('.orderby').forEach(select=>select.addEventListener('change',()=>{
-    document.querySelectorAll('#myTabContent > .tab-pane > .row').forEach(row=>{
-      [...row.children].sort((a,b)=>select.value==='name'?a.textContent.trim().localeCompare(b.textContent.trim()):designs.findIndex(d=>d[0]===a.querySelector('[data-product]')?.dataset.product)-designs.findIndex(d=>d[0]===b.querySelector('[data-product]')?.dataset.product)).forEach(el=>row.append(el));
+  const cards = [...document.querySelectorAll('[data-product]')];
+  const query = (params.get('q') || '').trim().slice(0, 120).toLowerCase();
+  if (/shop(?:-sidebar)?\.html$/.test(location.pathname)) {
+    const filters = [...document.querySelectorAll('.catalog-category')];
+    const sorts = [...document.querySelectorAll('.orderby')];
+    let category = params.get('category') || '';
+    let order = params.get('orderby') === 'name' ? 'name' : 'default';
+    function renderCatalog() {
+      const visible = new Set();
+      cards.forEach(card => {
+        const match = (!query || query.split(/\s+/).every(word => card.textContent.toLowerCase().includes(word))) &&
+          (!category || card.dataset.product === category || card.dataset.category === category);
+        card.parentElement.hidden = !match;
+        if (match) visible.add(card.dataset.product);
+      });
+      const count = visible.size;
+      document.querySelectorAll('.woocommerce-result-count').forEach(e => e.textContent = count + ' jewellery design' + (count === 1 ? '' : 's'));
+      document.querySelectorAll('.search-feedback').forEach(e => {
+        e.textContent = !count ? 'No matching designs. Try another collection or search, or contact us for help.' :
+          query ? 'Designs matching “' + query + '”.' : '';
+      });
+      document.querySelectorAll('#myTabContent > .tab-pane > .row').forEach(row => {
+        [...row.children].sort((a, b) => {
+          const idA = a.querySelector('[data-product]').dataset.product;
+          const idB = b.querySelector('[data-product]').dataset.product;
+          return order === 'name' ? designs.find(d => d[0] === idA)[1].localeCompare(designs.find(d => d[0] === idB)[1]) :
+            designs.findIndex(d => d[0] === idA) - designs.findIndex(d => d[0] === idB);
+        }).forEach(el => row.append(el));
+      });
+    }
+    function rememberFilters() {
+      const url = new URL(location.href);
+      category ? url.searchParams.set('category', category) : url.searchParams.delete('category');
+      order === 'name' ? url.searchParams.set('orderby', order) : url.searchParams.delete('orderby');
+      history.replaceState(null, '', url);
+    }
+    filters.forEach(select => {
+      select.value = [...select.options].some(o => o.value === category) ? category : '';
+      select.addEventListener('change', () => { category = select.value; renderCatalog(); rememberFilters(); });
     });
-  }));
+    sorts.forEach(select => {
+      select.value = order;
+      select.addEventListener('change', () => { order = select.value; renderCatalog(); rememberFilters(); });
+    });
+    renderCatalog();
+  }
   // Rates are fetched by the repository's daily job. The public JSON feed keeps
   // static deployments current without exposing API credentials or relying on CORS at the provider.
   const rateBlocks=[...document.querySelectorAll('[data-gold-rates]')];
@@ -78,3 +152,4 @@
   setInterval(()=>{if(!document.hidden)refresh();},15*60*1000);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});
 })();
+

@@ -1,0 +1,34 @@
+name: Update daily Sri Lanka gold rates
+on:
+  schedule:
+    # 09:00 and 15:00 Asia/Colombo; schedules may be delayed by GitHub.
+    - cron: '30 3,9 * * *'
+  push:
+    paths:
+      - scripts/update_gold_rates.py
+      - .github/workflows/update-gold-rates.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gold-rate-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch and validate the current reference
+        run: python scripts/update_gold_rates.py
+      - name: Commit the validated rate data
+        run: |
+          git config user.name 'elegance-rates[bot]'
+          git config user.email 'elegance-rates[bot]@users.noreply.github.com'
+          git add data/gold-rates.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update daily Sri Lanka gold reference'
+            git push
+          fi

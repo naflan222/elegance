@@ -1,30 +1,30 @@
 {
   "status": "ok",
-  "as_of": "2026-11-25T13:15:03+05:30",
+  "as_of": "2026-11-26T00:50:03+05:30",
   "verification_mode": "single_source",
   "currency": "LKR",
-  "spot_usd_per_oz": 3514.300049,
+  "spot_usd_per_oz": 3571.199951,
   "usd_lkr": 332.424303,
   "prices": {
     "24k": {
-      "per_gram": 37559.75,
-      "per_8g": 300477.98,
-      "per_troy_ounce": 1168238.74
+      "per_gram": 38167.88,
+      "per_8g": 305343.01,
+      "per_troy_ounce": 1187153.65
     },
     "22k": {
-      "per_gram": 34429.77,
-      "per_8g": 275438.15,
-      "per_troy_ounce": 1070885.52
+      "per_gram": 34987.22,
+      "per_8g": 279897.76,
+      "per_troy_ounce": 1088224.18
     },
     "21k": {
-      "per_gram": 32864.78,
-      "per_8g": 262918.23,
-      "per_troy_ounce": 1022208.9
+      "per_gram": 33396.89,
+      "per_8g": 267175.13,
+      "per_troy_ounce": 1038759.45
     },
     "18k": {
-      "per_gram": 28169.81,
-      "per_8g": 225358.49,
-      "per_troy_ounce": 876179.06
+      "per_gram": 28625.91,
+      "per_8g": 229007.26,
+      "per_troy_ounce": 890365.24
     }
   },
   "sources": {
@@ -35,6 +35,6 @@
   },
   "attribution": "Rates By Exchange Rate API (https://www.exchangerate-api.com)",
   "source_url": "https://www.goldpricetoday.lk/data-sources",
-  "fetched_at": "2026-11-25T13:20:24.363346+00:00",
+  "fetched_at": "2026-11-26T12:59:30.219954+00:00",
   "provider_url": "https://www.goldpricetoday.lk/"
 }
